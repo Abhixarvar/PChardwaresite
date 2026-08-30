@@ -23,7 +23,7 @@ function App() {
                   <Cpu size={24} color="white" />
                 </div>
                 <span style={{ fontSize: '1.25rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)' }}>
-                  PC Builder Pro
+                  PCBanaLo
                 </span>
               </Link>
               
@@ -51,7 +51,7 @@ function App() {
             color: 'var(--text-secondary)',
             marginTop: 'auto'
           }}>
-            <p>&copy; {new Date().getFullYear()} PC Builder Pro. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} PCBanaLo. All rights reserved.</p>
           </footer>
 
         </div>
