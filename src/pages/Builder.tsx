@@ -10,7 +10,7 @@ const categories: ComponentCategory[] = ['CPU', 'Motherboard', 'GPU', 'RAM', 'St
 export const Builder: React.FC = () => {
   const navigate = useNavigate();
   const { pcType, selectedComponents, totalPrice, compatibilityScore, compatibilityWarnings, formatPrice } = useBuilder();
-  const [activeCategory, setActiveCategory] = useState<ComponentCategory>('CPU');
+  const [activeCategory, setActiveCategory] = useState<ComponentCategory>('Case');
 
   if (!pcType) {
     // If accessed directly without selecting a type, maybe redirect or show a message

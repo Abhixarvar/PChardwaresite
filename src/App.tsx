@@ -1,9 +1,10 @@
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { BuilderProvider, useBuilder, type SupportedCountry } from './context/BuilderContext';
+import { BuilderProvider, useBuilder } from './context/BuilderContext';
 import { Home } from './pages/Home';
 import { Builder } from './pages/Builder';
-import { Cpu, Globe } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { CustomSelect } from './components/CustomSelect';
 
 const NavContent = () => {
   const { country, setCountry } = useBuilder();
@@ -28,27 +29,7 @@ const NavContent = () => {
           <Link to="/" style={{ fontWeight: '500' }}>Home</Link>
           <Link to="/builder" style={{ fontWeight: '500' }}>Builder</Link>
           
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--bg-tertiary)', padding: '0.25rem 0.75rem', borderRadius: 'var(--radius-full)' }}>
-            <Globe size={16} color="var(--text-secondary)" />
-            <select 
-              value={country} 
-              onChange={(e) => setCountry(e.target.value as SupportedCountry)}
-              style={{
-                background: 'transparent',
-                border: 'none',
-                color: 'var(--text-primary)',
-                outline: 'none',
-                cursor: 'pointer',
-                fontFamily: 'inherit'
-              }}
-            >
-              <option value="US">USD ($)</option>
-              <option value="IN">INR (₹)</option>
-              <option value="UK">GBP (£)</option>
-              <option value="EU">EUR (€)</option>
-              <option value="AU">AUD (A$)</option>
-            </select>
-          </div>
+          <CustomSelect value={country} onChange={setCountry} />
         </div>
       </div>
     </nav>

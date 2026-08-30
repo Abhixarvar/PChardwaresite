@@ -20,6 +20,7 @@ export const mockComponents: PCComponent[] = [
     price: 399.99,
     specs: { Cores: '8', Threads: '16', Socket: 'AM5', BaseClock: '4.2 GHz' },
     compatibilityTags: ['AM5', 'DDR5'],
+    image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 15,
   },
   {
@@ -29,6 +30,7 @@ export const mockComponents: PCComponent[] = [
     price: 409.99,
     specs: { Cores: '16', Threads: '24', Socket: 'LGA1700', BaseClock: '3.4 GHz' },
     compatibilityTags: ['LGA1700', 'DDR5', 'DDR4'],
+    image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 8,
   },
   {
@@ -38,6 +40,7 @@ export const mockComponents: PCComponent[] = [
     price: 229.99,
     specs: { Cores: '6', Threads: '12', Socket: 'AM5', BaseClock: '3.8 GHz' },
     compatibilityTags: ['AM5', 'DDR5'],
+    image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 20,
   },
 
@@ -49,6 +52,7 @@ export const mockComponents: PCComponent[] = [
     price: 269.99,
     specs: { Socket: 'AM5', FormFactor: 'ATX', Memory: 'DDR5' },
     compatibilityTags: ['AM5', 'DDR5', 'ATX'],
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 12,
   },
   {
@@ -58,6 +62,7 @@ export const mockComponents: PCComponent[] = [
     price: 259.99,
     specs: { Socket: 'LGA1700', FormFactor: 'ATX', Memory: 'DDR5' },
     compatibilityTags: ['LGA1700', 'DDR5', 'ATX'],
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 5,
   },
 
@@ -69,6 +74,7 @@ export const mockComponents: PCComponent[] = [
     price: 999.99,
     specs: { VRAM: '16GB GDDR6X', Length: '310mm', Power: '320W' },
     compatibilityTags: ['PCIe 4.0'],
+    image: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 3,
   },
   {
@@ -78,6 +84,7 @@ export const mockComponents: PCComponent[] = [
     price: 949.99,
     specs: { VRAM: '24GB GDDR6', Length: '287mm', Power: '355W' },
     compatibilityTags: ['PCIe 4.0'],
+    image: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 7,
   },
   {
@@ -87,6 +94,7 @@ export const mockComponents: PCComponent[] = [
     price: 299.99,
     specs: { VRAM: '8GB GDDR6', Length: '240mm', Power: '115W' },
     compatibilityTags: ['PCIe 4.0'],
+    image: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 25,
   },
 
@@ -98,6 +106,7 @@ export const mockComponents: PCComponent[] = [
     price: 114.99,
     specs: { Speed: '6000MHz', Type: 'DDR5', Latency: 'CL30' },
     compatibilityTags: ['DDR5'],
+    image: 'https://images.unsplash.com/photo-1562976540-02a8ebdc6709?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 40,
   },
   {
@@ -107,6 +116,7 @@ export const mockComponents: PCComponent[] = [
     price: 219.99,
     specs: { Speed: '6400MHz', Type: 'DDR5', Latency: 'CL32' },
     compatibilityTags: ['DDR5'],
+    image: 'https://images.unsplash.com/photo-1562976540-02a8ebdc6709?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 15,
   },
 
@@ -118,6 +128,7 @@ export const mockComponents: PCComponent[] = [
     price: 169.99,
     specs: { Type: 'NVMe M.2', Gen: 'PCIe 4.0', ReadSpeed: '7450 MB/s' },
     compatibilityTags: ['M.2', 'PCIe 4.0'],
+    image: 'https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 50,
   },
   {
@@ -127,6 +138,7 @@ export const mockComponents: PCComponent[] = [
     price: 64.99,
     specs: { Type: 'NVMe M.2', Gen: 'PCIe 4.0', ReadSpeed: '5000 MB/s' },
     compatibilityTags: ['M.2', 'PCIe 4.0'],
+    image: 'https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 30,
   },
 
@@ -138,6 +150,7 @@ export const mockComponents: PCComponent[] = [
     price: 134.99,
     specs: { Wattage: '850W', Rating: '80+ Gold', Modular: 'Full' },
     compatibilityTags: ['ATX'],
+    image: 'https://images.unsplash.com/photo-1587202372634-32705e3bf49c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 18,
   },
   {
@@ -147,6 +160,7 @@ export const mockComponents: PCComponent[] = [
     price: 179.99,
     specs: { Wattage: '1000W', Rating: '80+ Gold', Modular: 'Full' },
     compatibilityTags: ['ATX'],
+    image: 'https://images.unsplash.com/photo-1587202372634-32705e3bf49c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 10,
   },
 
@@ -158,6 +172,7 @@ export const mockComponents: PCComponent[] = [
     price: 159.99,
     specs: { Type: 'Mid Tower', MotherboardSupport: 'ATX, Micro-ATX, Mini-ITX' },
     compatibilityTags: ['ATX'],
+    image: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 12,
   },
   {
@@ -167,6 +182,7 @@ export const mockComponents: PCComponent[] = [
     price: 139.99,
     specs: { Type: 'Mid Tower', MotherboardSupport: 'ATX, Micro-ATX, Mini-ITX' },
     compatibilityTags: ['ATX'],
+    image: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 5,
   }
 ];
