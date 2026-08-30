@@ -9,7 +9,7 @@ const categories: ComponentCategory[] = ['CPU', 'Motherboard', 'GPU', 'RAM', 'St
 
 export const Builder: React.FC = () => {
   const navigate = useNavigate();
-  const { pcType, selectedComponents, totalPrice, compatibilityScore, compatibilityWarnings } = useBuilder();
+  const { pcType, selectedComponents, totalPrice, compatibilityScore, compatibilityWarnings, formatPrice } = useBuilder();
   const [activeCategory, setActiveCategory] = useState<ComponentCategory>('CPU');
 
   if (!pcType) {
@@ -41,7 +41,7 @@ export const Builder: React.FC = () => {
           <div className="glass-card" style={{ padding: '0.75rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Total Price</span>
-              <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>${totalPrice.toFixed(2)}</span>
+              <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{formatPrice(totalPrice)}</span>
             </div>
           </div>
           <button className="btn-primary">

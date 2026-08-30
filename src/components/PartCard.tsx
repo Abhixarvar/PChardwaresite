@@ -9,7 +9,7 @@ interface PartCardProps {
 }
 
 export const PartCard: React.FC<PartCardProps> = ({ component, isSelected }) => {
-  const { addComponent, removeComponent } = useBuilder();
+  const { addComponent, removeComponent, formatPrice } = useBuilder();
 
   const handleAction = () => {
     if (isSelected) {
@@ -24,7 +24,7 @@ export const PartCard: React.FC<PartCardProps> = ({ component, isSelected }) => 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
         <div>
           <h3 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>{component.name}</h3>
-          <span className="badge badge-success">${component.price.toFixed(2)}</span>
+          <span className="badge badge-success">{formatPrice(component.price)}</span>
         </div>
         <button 
           className={isSelected ? "btn-secondary" : "btn-primary"} 

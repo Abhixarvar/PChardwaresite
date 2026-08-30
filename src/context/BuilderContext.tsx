@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 import type { PCComponent, ComponentCategory } from '../data/mockComponents';
 
+export type SupportedCountry = 'US' | 'IN' | 'UK' | 'EU' | 'AU';
+
 interface BuilderContextType {
   selectedComponents: Record<ComponentCategory, PCComponent | null>;
   pcType: string;
@@ -11,12 +13,24 @@ interface BuilderContextType {
   compatibilityScore: number;
   compatibilityWarnings: string[];
   clearBuild: () => void;
+  country: SupportedCountry;
+  setCountry: (country: SupportedCountry) => void;
+  formatPrice: (usdPrice: number) => string;
 }
+
+const EXCHANGE_RATES: Record<SupportedCountry, { rate: number; symbol: string; locale: string }> = {
+  US: { rate: 1, symbol: '$', locale: 'en-US' },
+  IN: { rate: 83.5, symbol: '₹', locale: 'en-IN' },
+  UK: { rate: 0.79, symbol: '£', locale: 'en-GB' },
+  EU: { rate: 0.93, symbol: '€', locale: 'de-DE' },
+  AU: { rate: 1.52, symbol: 'A$', locale: 'en-AU' },
+};
 
 const BuilderContext = createContext<BuilderContextType | undefined>(undefined);
 
 export const BuilderProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [pcType, setPcType] = useState<string>('');
+  const [country, setCountry] = useState<SupportedCountry>('US');
   const [selectedComponents, setSelectedComponents] = useState<Record<ComponentCategory, PCComponent | null>>({
     CPU: null,
     Motherboard: null,
@@ -112,6 +126,21 @@ export const BuilderProvider: React.FC<{ children: ReactNode }> = ({ children })
 
   }, [selectedComponents]);
 
+  const formatPrice = (usdPrice: number) => {
+    const { rate, locale, symbol } = EXCHANGE_RATES[country];
+    const converted = usdPrice * rate;
+    
+    // Format using Intl.NumberFormat for proper comma separation
+    const formattedAmount = new Intl.NumberFormat(locale, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(converted);
+
+    // Depending on the country, the symbol position might change, but for simplicity
+    // we manually construct it or rely on the basic symbol we defined.
+    return `${symbol}${formattedAmount}`;
+  };
+
   return (
     <BuilderContext.Provider value={{
       selectedComponents,
@@ -122,7 +151,10 @@ export const BuilderProvider: React.FC<{ children: ReactNode }> = ({ children })
       totalPrice,
       compatibilityScore,
       compatibilityWarnings,
-      clearBuild
+      clearBuild,
+      country,
+      setCountry,
+      formatPrice
     }}>
       {children}
     </BuilderContext.Provider>
