@@ -43,6 +43,26 @@ export const mockComponents: PCComponent[] = [
     image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 20,
   },
+  {
+    id: 'cpu-4',
+    name: 'Intel Core i5-13600K',
+    category: 'CPU',
+    price: 299.99,
+    specs: { Cores: '14', Threads: '20', Socket: 'LGA1700', BaseClock: '3.5 GHz' },
+    compatibilityTags: ['LGA1700', 'DDR5', 'DDR4'],
+    image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    stock: 12,
+  },
+  {
+    id: 'cpu-5',
+    name: 'AMD Ryzen 9 7950X',
+    category: 'CPU',
+    price: 549.99,
+    specs: { Cores: '16', Threads: '32', Socket: 'AM5', BaseClock: '4.5 GHz' },
+    compatibilityTags: ['AM5', 'DDR5'],
+    image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    stock: 5,
+  },
 
   // Motherboards
   {
@@ -64,6 +84,26 @@ export const mockComponents: PCComponent[] = [
     compatibilityTags: ['LGA1700', 'DDR5', 'ATX'],
     image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 5,
+  },
+  {
+    id: 'mb-3',
+    name: 'Gigabyte B650 AORUS ELITE AX',
+    category: 'Motherboard',
+    price: 219.99,
+    specs: { Socket: 'AM5', FormFactor: 'ATX', Memory: 'DDR5' },
+    compatibilityTags: ['AM5', 'DDR5', 'ATX'],
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    stock: 15,
+  },
+  {
+    id: 'mb-4',
+    name: 'ASUS ROG Strix Z790-I Gaming WiFi',
+    category: 'Motherboard',
+    price: 439.99,
+    specs: { Socket: 'LGA1700', FormFactor: 'Mini-ITX', Memory: 'DDR5' },
+    compatibilityTags: ['LGA1700', 'DDR5', 'Mini-ITX'],
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    stock: 4,
   },
 
   // GPUs
@@ -97,6 +137,36 @@ export const mockComponents: PCComponent[] = [
     image: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 25,
   },
+  {
+    id: 'gpu-4',
+    name: 'NVIDIA GeForce RTX 4090',
+    category: 'GPU',
+    price: 1599.99,
+    specs: { VRAM: '24GB GDDR6X', Length: '336mm', Power: '450W' },
+    compatibilityTags: ['PCIe 4.0'],
+    image: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    stock: 2,
+  },
+  {
+    id: 'gpu-5',
+    name: 'AMD Radeon RX 7800 XT',
+    category: 'GPU',
+    price: 499.99,
+    specs: { VRAM: '16GB GDDR6', Length: '267mm', Power: '263W' },
+    compatibilityTags: ['PCIe 4.0'],
+    image: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    stock: 18,
+  },
+  {
+    id: 'gpu-6',
+    name: 'NVIDIA GeForce RTX 4070 Ti Super',
+    category: 'GPU',
+    price: 799.99,
+    specs: { VRAM: '16GB GDDR6X', Length: '285mm', Power: '285W' },
+    compatibilityTags: ['PCIe 4.0'],
+    image: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    stock: 9,
+  },
 
   // RAM
   {
@@ -118,6 +188,16 @@ export const mockComponents: PCComponent[] = [
     compatibilityTags: ['DDR5'],
     image: 'https://images.unsplash.com/photo-1562976540-02a8ebdc6709?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 15,
+  },
+  {
+    id: 'ram-3',
+    name: 'TEAMGROUP T-Force Delta RGB 32GB',
+    category: 'RAM',
+    price: 104.99,
+    specs: { Speed: '6000MHz', Type: 'DDR5', Latency: 'CL30' },
+    compatibilityTags: ['DDR5'],
+    image: 'https://images.unsplash.com/photo-1562976540-02a8ebdc6709?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    stock: 22,
   },
 
   // Storage
@@ -141,6 +221,16 @@ export const mockComponents: PCComponent[] = [
     image: 'https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 30,
   },
+  {
+    id: 'storage-3',
+    name: 'Western Digital WD_Black SN850X 2TB',
+    category: 'Storage',
+    price: 159.99,
+    specs: { Type: 'NVMe M.2', Gen: 'PCIe 4.0', ReadSpeed: '7300 MB/s' },
+    compatibilityTags: ['M.2', 'PCIe 4.0'],
+    image: 'https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    stock: 18,
+  },
 
   // Power Supplies
   {
@@ -163,6 +253,16 @@ export const mockComponents: PCComponent[] = [
     image: 'https://images.unsplash.com/photo-1587202372634-32705e3bf49c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 10,
   },
+  {
+    id: 'psu-3',
+    name: 'Corsair SF750',
+    category: 'PowerSupply',
+    price: 169.99,
+    specs: { Wattage: '750W', Rating: '80+ Platinum', Modular: 'Full' },
+    compatibilityTags: ['SFX', 'Mini-ITX'],
+    image: 'https://images.unsplash.com/photo-1587202372634-32705e3bf49c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    stock: 5,
+  },
 
   // Cases
   {
@@ -184,5 +284,45 @@ export const mockComponents: PCComponent[] = [
     compatibilityTags: ['ATX'],
     image: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     stock: 5,
+  },
+  {
+    id: 'case-3',
+    name: 'Corsair 4000D Airflow',
+    category: 'Case',
+    price: 104.99,
+    specs: { Type: 'Mid Tower', MotherboardSupport: 'ATX, Micro-ATX, Mini-ITX' },
+    compatibilityTags: ['ATX'],
+    image: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    stock: 25,
+  },
+  {
+    id: 'case-4',
+    name: 'Lian Li O11 Dynamic EVO',
+    category: 'Case',
+    price: 149.99,
+    specs: { Type: 'Mid Tower', MotherboardSupport: 'E-ATX, ATX, Micro-ATX, Mini-ITX' },
+    compatibilityTags: ['ATX'],
+    image: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    stock: 14,
+  },
+  {
+    id: 'case-5',
+    name: 'Cooler Master MasterBox NR200P',
+    category: 'Case',
+    price: 99.99,
+    specs: { Type: 'Small Form Factor', MotherboardSupport: 'Mini-ITX, Mini-DTX' },
+    compatibilityTags: ['Mini-ITX'],
+    image: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    stock: 8,
+  },
+  {
+    id: 'case-6',
+    name: 'Phanteks NV7',
+    category: 'Case',
+    price: 199.99,
+    specs: { Type: 'Full Tower', MotherboardSupport: 'E-ATX, ATX, Micro-ATX, Mini-ITX' },
+    compatibilityTags: ['ATX'],
+    image: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    stock: 4,
   }
 ];

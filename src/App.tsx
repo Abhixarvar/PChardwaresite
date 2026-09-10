@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { BuilderProvider, useBuilder } from './context/BuilderContext';
 import { Home } from './pages/Home';
 import { Builder } from './pages/Builder';
-import { Cpu } from 'lucide-react';
+import { Cpu, Sun, Moon, Laptop } from 'lucide-react';
 import { CustomSelect } from './components/CustomSelect';
+import { useTheme } from './hooks/useTheme';
 
 const NavContent = () => {
   const { country, setCountry } = useBuilder();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <nav style={{ 
@@ -30,6 +32,24 @@ const NavContent = () => {
           <Link to="/builder" style={{ fontWeight: '500' }}>Builder</Link>
           
           <CustomSelect value={country} onChange={setCountry} />
+          
+          <button 
+            onClick={toggleTheme}
+            style={{ 
+              background: 'var(--bg-tertiary)',
+              border: '1px solid var(--border-color)',
+              color: 'var(--text-primary)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '0.5rem',
+              borderRadius: '8px',
+              transition: 'var(--transition-fast)'
+            }}
+            title={`Current theme: ${theme}. Click to toggle.`}
+          >
+            {theme === 'dark' ? <Sun size={20} /> : theme === 'light' ? <Moon size={20} /> : <Laptop size={20} />}
+          </button>
         </div>
       </div>
     </nav>
