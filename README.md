@@ -58,6 +58,10 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 - `src/hooks/`: Custom React hooks (e.g., `useTheme`).
 - `src/pages/`: Main application pages (`Home.tsx`, `Builder.tsx`).
 
+## 💖 Support
+
+If you found this project helpful, please consider supporting it by leaving a ⭐ on [GitHub](https://github.com/Abhixarvar/PChardwaresite)! You can also check out more of my work on my [GitHub Profile](https://github.com/Abhixarvar).
+
 ## 📄 License
 
 This project is open-source and available under the [MIT License](LICENSE).

@@ -83,6 +83,10 @@ function App() {
             marginTop: 'auto'
           }}>
             <p>&copy; {new Date().getFullYear()} PCBanaLo. All rights reserved.</p>
+            <p style={{ marginTop: '0.5rem', fontSize: '0.9rem' }}>
+              Built by <a href="https://github.com/Abhixarvar" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Abhixarvar</a>. 
+              Support the project by leaving a ⭐ on <a href="https://github.com/Abhixarvar/PChardwaresite" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>GitHub</a>!
+            </p>
           </footer>
 
         </div>
