@@ -17,7 +17,7 @@ const NavContent = () => {
       borderBottom: '1px solid var(--border-color)',
       padding: '1rem 0'
     }}>
-      <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div className="container nav-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-primary)' }}>
           <div style={{ background: 'var(--gradient-primary)', padding: '0.5rem', borderRadius: '8px' }}>
             <Cpu size={24} color="white" />
@@ -27,7 +27,7 @@ const NavContent = () => {
           </span>
         </Link>
         
-        <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+        <div className="nav-links" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
           <Link to="/" style={{ fontWeight: '500' }}>Home</Link>
           <Link to="/builder" style={{ fontWeight: '500' }}>Builder</Link>
           

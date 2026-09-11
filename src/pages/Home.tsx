@@ -80,8 +80,8 @@ export const Home: React.FC = () => {
       >
         <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(15, 17, 21, 0.65)', zIndex: 1 }}></div>
         <div style={{ position: 'relative', zIndex: 2, padding: '0 2rem' }}>
-          <h1 className="text-gradient" style={{ fontSize: '4.5rem', marginBottom: '1rem', textShadow: '0 4px 20px rgba(0,0,0,0.5)', lineHeight: 1.1 }}>Power Your Passion</h1>
-          <p style={{ fontSize: '1.25rem', maxWidth: '650px', margin: '0 auto', color: 'rgba(255,255,255,0.9)', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
+          <h1 className="text-gradient hero-title" style={{ fontSize: '4.5rem', marginBottom: '1rem', textShadow: '0 4px 20px rgba(0,0,0,0.5)', lineHeight: 1.1 }}>Power Your Passion</h1>
+          <p className="hero-subtitle" style={{ fontSize: '1.25rem', maxWidth: '650px', margin: '0 auto', color: 'rgba(255,255,255,0.9)', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
             Experience top-tier performance with our expertly crafted prebuilts, or design your ultimate custom rig from the ground up.
           </p>
         </div>
@@ -116,7 +116,7 @@ export const Home: React.FC = () => {
               <button onClick={() => setView('initial')} style={{ color: 'var(--text-secondary)', background: 'none', border: 'none', cursor: 'pointer', marginBottom: '1.5rem', fontSize: '1rem', textDecoration: 'underline' }}>
                 &larr; Back to options
               </button>
-              <h2 className="text-gradient" style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>What's your primary use case?</h2>
+              <h2 className="text-gradient hero-title" style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>What's your primary use case?</h2>
               <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>Select what you'll be doing most to get tailored recommendations.</p>
             </div>
             
@@ -146,7 +146,7 @@ export const Home: React.FC = () => {
               <button onClick={() => setView('typeSelection')} style={{ color: 'var(--text-secondary)', background: 'none', border: 'none', cursor: 'pointer', marginBottom: '1.5rem', fontSize: '1rem', textDecoration: 'underline' }}>
                 &larr; Back to use cases
               </button>
-              <h2 className="text-gradient" style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>
+              <h2 className="text-gradient hero-title" style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>
                 Choose your {selectedType === 'Gaming' ? 'Game / Goal' : 'Workflow'}
               </h2>
             </div>
@@ -167,7 +167,7 @@ export const Home: React.FC = () => {
               <button onClick={() => setView('targetSelection')} style={{ color: 'var(--text-secondary)', background: 'none', border: 'none', cursor: 'pointer', marginBottom: '1.5rem', fontSize: '1rem', textDecoration: 'underline' }}>
                 &larr; Back to targets
               </button>
-              <h2 className="text-gradient" style={{ fontSize: '3rem', marginBottom: '1rem' }}>Recommended Builds for {selectedTarget}</h2>
+              <h2 className="text-gradient hero-title" style={{ fontSize: '3rem', marginBottom: '1rem' }}>Recommended Builds for {selectedTarget}</h2>
             </div>
             
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>

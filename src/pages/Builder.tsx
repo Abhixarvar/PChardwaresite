@@ -26,7 +26,7 @@ export const Builder: React.FC = () => {
     <div className="container animate-fade-in" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>
       
       {/* Header Area */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
+      <div className="builder-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
         <div>
           <button 
             onClick={() => navigate('/')} 
@@ -51,7 +51,7 @@ export const Builder: React.FC = () => {
       </div>
 
       {/* Main Layout */}
-      <div style={{ display: 'grid', gridTemplateColumns: '250px 1fr', gap: '2rem', alignItems: 'start' }}>
+      <div className="builder-layout" style={{ display: 'grid', gridTemplateColumns: '250px 1fr', gap: '2rem', alignItems: 'start' }}>
         
         {/* Sidebar / Category Selection */}
         <div className="glass-card" style={{ padding: '1rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
