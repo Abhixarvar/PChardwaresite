@@ -1,32 +1,63 @@
-# React + TypeScript + Vite
+# 🖥️ PCBanaLo
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+![Hero Banner](public/hero-pc.jpg)
 
-Currently, two official plugins are available:
+**PCBanaLo** is a modern, responsive PC hardware configuration and building application. Whether you are looking for a pre-configured build tailored to your favorite game or workflow, or you want to hand-pick every component for a custom rig, PCBanaLo provides a seamless and guided experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🎯 **Use-Case Selection System**: Not sure where to start? Tell us your primary use case (Gaming vs. Work), select your target game or workflow (e.g., *Cyberpunk 2077* or *Video Editing*), and get a curated list of optimized PC builds with detailed pros and cons.
+- 🛠️ **Custom Builder**: Build a PC from scratch. Select components across all major categories: CPU, Motherboard, GPU, RAM, Storage, Power Supply, and Case.
+- ⚡ **Real-Time Compatibility Checks**: Never worry about incompatible parts. The builder warns you about:
+  - CPU & Motherboard socket mismatches.
+  - Motherboard & RAM generation mismatches (e.g., DDR4 vs DDR5).
+  - Power Supply wattage sufficiency based on GPU power requirements.
+- 💱 **Currency Conversion**: Instantly view prices in your local currency (Supports USD, INR, GBP, EUR, AUD).
+- 🌓 **Theme Toggling**: Sleek glassmorphism UI with support for Light and Dark modes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Tech Stack
 
-## Expanding the Oxlint configuration
+- **Framework**: [React](https://react.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Bundler**: [Vite](https://vitejs.dev/)
+- **Routing**: [React Router](https://reactrouter.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Styling**: Vanilla CSS with CSS Variables for theme management
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 📦 Getting Started
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+### Prerequisites
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Abhixarvar/PChardwaresite.git
+   cd PChardwaresite
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173`.
+
+## 🏗️ Project Structure
+
+- `src/components/`: Reusable UI components (Select dropdowns, Part cards, etc.).
+- `src/context/`: React context for managing the global builder state, selected components, and pricing.
+- `src/data/`: Mock data for components and pre-configured builds.
+- `src/hooks/`: Custom React hooks (e.g., `useTheme`).
+- `src/pages/`: Main application pages (`Home.tsx`, `Builder.tsx`).
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
